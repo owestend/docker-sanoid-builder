@@ -18,7 +18,8 @@ RUN apt update && apt install -y \
     git clone https://github.com/jimsalterjrs/sanoid.git && \
     cd sanoid && \
     # checkout latest stable release or stay on master for bleeding edge stuff (but expect bugs!)
-    git checkout $(git tag | grep "^v" | tail -n 1) && \
+    #git checkout $(git tag | grep "^v" | tail -n 1) && \
+    git checkout v2.1.0 && \
     ln -s packages/debian . && \
     dpkg-buildpackage -uc -us
   # && \
